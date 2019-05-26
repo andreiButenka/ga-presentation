@@ -1,4 +1,4 @@
-# Hi. My name is Andrei Butenka. I’m the rolling scopes school student. And today I’m giving a Google Analytics presentation. All website owners ask themselves same old questions. How many people visit my website? Where do my visitors live? Do I need a mobile-friendly website? How can I improve my website's speed?
+Hi. My name is Andrei Butenka. I’m the rolling scopes school student. And today I’m giving a Google Analytics presentation. All website owners ask themselves same old questions. How many people visit my website? Where do my visitors live? Do I need a mobile-friendly website? How can I improve my website's speed?
 As a developer, you can answer all these questions using Google Analytics.
 Today we’ll learn a little bit about Google Analytics’ history, its goals, working principles. I’ll tell about integration of this service, about event tracking and will say some words about Google Analytics dashboard and other features.
 Let’s start with the basics. Google Analytics is the most widely used web analytics service offered by Google. Google launched the service in November 2005. It’s free, highly customizable, constantly changing and updating.
