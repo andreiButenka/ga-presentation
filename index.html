@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Google Analytics Presentation</title>
+
+		<meta name="description" content="presentation">
+		<meta name="author" content="Andrei Butenka">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<img class="plain" src="img/GA-large-logo-new-1.png" alt="GA-logo">
+					<h3>Presentation for RS School</h3>
+					<p>
+						<small>Created by <a href="https://github.com/andreiButenka" target="_blank">Andrei Butenka</a></small>
+					</p>
+				</section>
+
+				<section>
+					<img class="plain" style="position: absolute;top:-95px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+					<h4>Agenda:</h4>
+					<ul>
+						<li>History of the service.</li>
+						<li>Google Analytics' goals.</li>
+						<li>Working principles.</li>
+						<li>Integration.</li>
+						<li>Event tracking.</li>
+						<li>Dashboard.</li>
+						<li>etc.</li>
+					</ul>
+				</section>
+
+				<section>
+					<img class="plain" style="position: absolute;top:-180px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+					<ul>
+						<li>Free web analytics service run by Google.</li>
+						<li>Tracks and reports website traffic.</li>
+						<li>Available since 2005.</li>
+						<li>Constantly changing and updating.</li>
+						<li>The most widely used web analytics service.</li>
+					</ul>
+				</section>
+
+				<section style="text-align:left">
+					<img class="plain" style="position: absolute;top:-180px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+					<h4>Google analytics – What does it do?</h4>
+					<ul>
+						<li>Website traffic.</li>
+						<li>Track conversions.</li>
+						<li>E-commerce.</li>
+						<li>etc.</li>
+					</ul>
+				</section>
+
+				<section>
+					<img class="plain" style="position: absolute;top:-180px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+					<h4>Google analytics – How does it work?</h4>
+					<ol>
+						<li>Data generated from user behavior.</li>
+						<li>Data is processed by Google Analytics Back End</li>
+						<li>Reports are generated.</li>
+					</ol>
+				</section>
+
+				<section data-transition="slide" data-background="#798090" data-background-transition="zoom">
+					<img class="plain" style="position: absolute;top:-112px;left:0;width: 270px;background:none;" src="img/GA-middle-square-logo-white.png" alt="GA-small-logo">
+					<h4 style="color:#fff">Integration</h4>
+					<img class="plain" src="img/GA-property.png" alt="GA-property">
+				</section>
+
+        <section>
+        	<section>
+        		<img class="plain" style="position: absolute;top:-112px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+        		<h4>Website tracking</h4>
+        					  <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+        	<!-- Google Analytics -->
+        	<script>
+        	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        	ga('create', 'UA-XXXXX-Y', 'auto');
+        	ga('send', 'pageview');
+        	</script>
+        	<!-- End Google Analytics -->
+        						</code></pre>
+        	</section>
+        	<section>
+        		<img class="plain" style="position: absolute;top:-112px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+        		<h4>Website tracking</h4>
+        					  <pre><code class="hljs" data-trim data-line-numbers="8-9">
+        	<!-- Google Analytics -->
+        	<script>
+        	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        	ga('create', 'UA-XXXXX-Y', 'auto');
+        	ga('send', 'pageview');
+        	</script>
+        	<!-- End Google Analytics -->
+        						</code></pre>
+        	</section>
+        	<section>
+        		<img class="plain" style="position: absolute;top:-170px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+        		<h4>Google Analytics 'ga' function</h4>
+        					  <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+        	...
+        	ga('create', 'UA-XXXXX-Y', 'auto');
+        	ga('send', 'pageview');
+        	ga('require', 'ec');
+        	ga('require', 'ecommerce');
+        	ga('remove');
+        	...
+        	etc.
+        						</code></pre>
+        	</section>
+        </section>
+
+        <section data-transition="slide" data-background="#798090" data-background-transition="zoom">
+					<img class="plain" style="position: absolute;top:-42px;left:0;width: 270px;background:none;" src="img/GA-middle-square-logo-white.png" alt="GA-small-logo">
+					<h4 style="margin-top:85px;color:#fff">Console debugging</h4>
+					<img class="plain" src="img/debug.jpg" alt="debug">
+				</section>
+
+				<section>
+					<section>
+						<img class="plain" style="position: absolute;top:-180px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+						<h4>User interactions tracking</h4>
+						<ul>
+							<li>Pageviews.</li>
+							<li>Events.</li>
+						</ul>
+					</section>
+					<section>
+						<img class="plain" style="position: absolute;top:-112px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+						<h4>Events</h4>
+						<ul>
+							<li>Mouse events.</li>
+							<li>Touch events.</li>
+							<li>Keyboard events.</li>
+							<li>Frame events.</li>
+							<li>Form events.</li>
+						</ul>
+					</section>
+					<section>
+						<img class="plain" style="position: absolute;top:-180px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+						<h4>Events</h4>
+						<ul>
+							<li>One which generate pageviews.</li>
+							<li>One which do not generate pageviews.</li>
+						</ul>
+					</section>
+				</section>
+        <section>
+        	<img class="plain" style="position: absolute;top:-180px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+        	<h4>Event tracking parameters</h4>
+        	<ul>
+        		<li>Event Category.</li>
+        		<li>Event Action.</li>
+        		<li>Event Label.</li>
+        		<li>Event Value (optional).</li>
+        	</ul>
+        </section>
+
+        <section>
+        	<section>
+        	  <img class="plain" style="position: absolute;top:-180px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+        	  <h4>Custom events</h4>
+            <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">&lt;onClick='ga('send', 'event',
+{eventCategory: 'Contact', eventAction: 'Submit', eventLabel: 'Contact Page Form'})&gt;</code></pre>
+          </section>
+          <section data-transition="slide" data-background="#798090" data-background-transition="zoom">
+					  <img class="plain" style="position: absolute;top:-112px;left:0;width: 270px;background:none;" src="img/GA-middle-square-logo-white.png" alt="GA-small-logo">
+					  <img class="plain" style="margin-top:80px;" src="img/custom-events.png" alt="custom">
+				  </section>
+        </section>
+
+        <section data-transition="slide" data-background="#8965A5" data-background-transition="zoom">
+        	<h4 style="margin-top:80px;">GA dashboard</h4>
+					<img class="plain" style="position: absolute;top:-15px;left:0;width: 270px;background:none;" src="img/GA-middle-square-logo-white.png" alt="GA-small-logo">
+					<img class="plain" style="margin-top:10px;width:80%;" src="img/dashboard.png" alt="dashboard">
+				</section>
+
+				<section data-transition="slide" data-background="#8965A5" data-background-transition="zoom">
+        	<h4 style="margin-top:80px;"> Real-time analytics</h4>
+					<img class="plain" style="position: absolute;top:-15px;left:0;width: 270px;background:none;" src="img/GA-middle-square-logo-white.png" alt="GA-small-logo">
+					<img class="plain" style="margin-top:10px;width:80%;" src="img/real-time.png" alt="real-time">
+				</section>
+
+			  <section>
+			 	 <img class="plain" style="position: absolute;top:-85px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+			 	 <h4>Features:</h4>
+			 	 <ul>
+			 		<li>Push notifications.</li>
+			 		<li>Service-workers.</li>
+			 		<li>Calculated metrics.</li>
+			 		<li>Offline analytics.</li>
+			 		<li>Analytics stored in index DB.</li>
+			 		<li>Google Analytics Integrations.</li>
+			 		<li>etc.</li>
+			 	 </ul>
+			  </section>
+
+			  <section>
+			  	<img class="plain" style="position: absolute;top:-85px;left:0;width: 270px;opacity:0.8;" src="img/GA-middle-square-logo.png" alt="GA-small-logo">
+					<h4>Learn more</h4>
+					<ul>
+						<li><a href="https://analyticsacademy.withgoogle.com/explorer" target="_blank">Google Analytics Academy</a></li>
+						<li><a href="http://www.google.com/analytics/learn/index.html" target="_blank">Google Analytics Training and Certifications</a></li>
+						<li><a href="http://cutroni.com/blog/" target="_blank">Analytics Talk</a></li>
+						<li><a href="https://moz.com/blog/absolute-beginners-guide-to-google-analytics" target="_blank">Moz</a></li>
+						<li><a href="http://search.searchengineland.com/search?from=os&w=google+analytics" target="_blank">Search Engine Land’s analytics posts</a></li>
+						<li><a href="http://www.benbarden.com/ebooks/" target="_blank">Ben Bardon’s e-book: A Beginner’s Guide to Google Analytics</a></li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
