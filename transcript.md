@@ -12,12 +12,12 @@ An entire snippet needs to be pasted into every page you want to track. At a hig
 Also you can replace analytics.js with analytics_debug.js for console debugging. Using this version will you to log detailed messages to your console for every page view HIT. Also it will log errors and warnings for your tracking code.
 There are two common ways to track user interactions: page views and events. According to Google Analytics, a pageview is an instance of a page being loaded (or reloaded) in a browser. Pageviews is a metric defined by total number of pages viewed. Page views are great and they are foundation of many Google Analytics’ reports. But if you want to measure and learn from what happens on your page, you want to use event tracking. A user can interact with our website via a mouse, touch screen, keyboard, frame and forms, and so on. That’s why we can have: mouse events, touch, keyboard, frame events, form events. There are two broad categories of events:
 * One, which generate page views (like clicking on an internal link on a webpage).  
-* One, which do not generate page views (for example, clicking on an external link, downloading a file, scrolling a page and so on).&nbsp 
+* One, which do not generate page views (for example, clicking on an external link, downloading a file, scrolling a page and so on).&nbsp; 
 There are four Event Tracking parameters:
 * Event Category (it is a group of similar events you want to track);
 * Event Action (it’s a type of event you want to track for a specific element of website);
 * Event Label (it’s an element name, whose users’ interactions you want to track);
-* and optional Event Value. This is a numerical value that can be assigned to the event you want to track).&nbsp 
+* and optional Event Value. This is a numerical value that can be assigned to the event you want to track).&nbsp; 
 Google Analytics supports custom events. Custom events allow more detailed analysis of user behavior. For example, we have 5 forms on our website. And we want to track submissions of these forms on our Contact page. Since we want to track submission of contact forms, we can set the Event’s Category value to “Contact”. We want to fire event when a user clicks “Submit”. And we can add Event Label’s value as “Contact Page Form”.
 That’s it! All you need to set up new goal in Google Analytics’ dashboard. There are the same parameters we set in our JavaScript snippet. Now you can view your custom event as a goal and see more in depth data about your event in the Conversion reports. 
 Now few words about Google Analytics’ dashboard. Here is the audience’s overview interface. You can see general information such as page view records, ratio of new and returning visitors and other statistics. Also see you can specific information about user’s language, country, city, device, operating system, screen resolution and so on.
